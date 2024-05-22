@@ -1,2 +1,16 @@
 ﻿  game.cpp
+C:\Users\Mainer\Desktop\proekt\game\game\game.cpp(47,4): warning C4838: Преобразование из "int" в "char" требует сужающего преобразования.
+C:\Users\Mainer\Desktop\proekt\game\game\game.cpp(47,4): warning C4309: инициализация: усечение константного значения
+C:\Users\Mainer\Desktop\proekt\game\game\game.cpp(48,2): warning C4838: Преобразование из "int" в "char" требует сужающего преобразования.
+C:\Users\Mainer\Desktop\proekt\game\game\game.cpp(48,2): warning C4309: инициализация: усечение константного значения
+C:\Users\Mainer\Desktop\proekt\game\game\game.cpp(48,9): warning C4838: Преобразование из "int" в "char" требует сужающего преобразования.
+C:\Users\Mainer\Desktop\proekt\game\game\game.cpp(48,9): warning C4309: инициализация: усечение константного значения
+C:\Users\Mainer\Desktop\proekt\game\game\game.cpp(50,2): warning C4838: Преобразование из "int" в "char" требует сужающего преобразования.
+C:\Users\Mainer\Desktop\proekt\game\game\game.cpp(50,2): warning C4309: инициализация: усечение константного значения
+C:\Users\Mainer\Desktop\proekt\game\game\game.cpp(51,9): warning C4838: Преобразование из "int" в "char" требует сужающего преобразования.
+C:\Users\Mainer\Desktop\proekt\game\game\game.cpp(51,9): warning C4309: инициализация: усечение константного значения
+C:\Users\Mainer\Desktop\proekt\game\game\game.cpp(52,14): warning C4838: Преобразование из "int" в "char" требует сужающего преобразования.
+C:\Users\Mainer\Desktop\proekt\game\game\game.cpp(52,14): warning C4309: инициализация: усечение константного значения
+C:\Users\Mainer\Desktop\proekt\game\game\game.cpp(179,17): warning C4838: Преобразование из "int" в "SHORT" требует сужающего преобразования.
+C:\Users\Mainer\Desktop\proekt\game\game\game.cpp(179,20): warning C4838: Преобразование из "int" в "SHORT" требует сужающего преобразования.
   game.vcxproj -> C:\Users\Mainer\Desktop\proekt\game\x64\Debug\game.exe
