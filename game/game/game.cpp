@@ -60,6 +60,10 @@ void about();  // об игре
 void strelki();  // движение
 int wait();
 void massive(int x, int y); // вывод массива на экран
+void proverka_win();          // проверка на победу
+void enter(int y, int x);      // нажатие
+void proverka(int i1, int i2, int j1, int j2);  // сравнение символов
+
 
 int main() {
     setlocale(0, "Russian");
@@ -107,18 +111,20 @@ void about() {
                        \n 3.Твоя задача - открыть все карточки.\
                        \n Выполнил: студент  Опарин Дмитрий\n ");
 }
+
 int wait() {
 
     fflush(stdin);
     return _getch();
 }
+// управление по полю стрелками
 void strelki() {
 
     int k=0; int kol = 0, i1, j1, i2, j2;
     while (k != 27)
 
     {
-       // proverka_win();
+        proverka_win();  
         massive(c.X, c.Y);
 
         k = _getch();
@@ -135,7 +141,7 @@ void strelki() {
 
         case 80:if (c.Y < 14) c.Y++;break;
 
-        case 13: //enter(c.X - 34, c.Y - 9);
+        case 13: enter(c.X - 34, c.Y - 9);
             kol++;
             switch (kol) {
             case 1:
@@ -148,7 +154,7 @@ void strelki() {
                 j2 = c.X - 34;
                 Sleep(1000);
 
-                //proverka(i1, i2, j1, j2);
+                proverka(i1, i2, j1, j2);
                 kol = 0;
                 break;
             }
@@ -158,6 +164,21 @@ void strelki() {
 
         } }
 }
+// проверка на победу проверяет что не осталось закрытых картинок
+void proverka_win() {
+    int b = 0;
+    for (int i = 0; i < 6;i++)
+        for (int j = 0;j < 6;j++) {
+            if (matrix[i][j] != SPACE) {
+                b++;
+            }
+        }
+    if (b == 36) {
+        system("cls");
+        printf("YOU WIN"); _getch(); exit;
+    }
+}
+// отрисовка игрового поля 
 
 // srand(time(NULL)); 
 void massive(int x, int y) {
@@ -178,4 +199,29 @@ void massive(int x, int y) {
     }
     COORD g = { x, y };
     SetConsoleCursorPosition(h, g);
+}
+// проверка совпадений
+void proverka(int i1, int i2, int j1, int j2) {
+
+    /*// if (matrix [i1][j1]!=SPACE || matrix[i2][j2]!=SPACE );
+    if (storage[i1][j1]!=storage[i2][j2] ){
+         matrix[i1][j1]=SPACE;
+         //Sleep (1000);
+         matrix[i2][j2]=SPACE;*/
+
+    if (matrix[i1][j1] == matrix[i2][j2])
+    {
+        //matrix[i1][j1]=RET;
+        //matrix[i2][j2]=RET;
+    }
+
+    else {
+        matrix[i1][j1] = SPACE;
+        matrix[i2][j2] = SPACE;
+    }
+    proverka_win();
+}
+// открытие картинок
+void enter(int y, int x) {
+    matrix[x][y] = storage[x][y];
 }
