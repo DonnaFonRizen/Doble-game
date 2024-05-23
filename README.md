@@ -23,3 +23,6 @@
                           1)Перемещение с помощью стрелочек.
                           
                            2)Открытие карточки клавишей Enter.
+![pole](https://github.com/DonnaFonRizen/Doble-game/assets/169992077/5ae06cd5-d60f-4bff-b61e-8a609ac95e22)
+                            
+                            Желаю удачи!
